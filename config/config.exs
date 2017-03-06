@@ -4,7 +4,7 @@ use Mix.Config
 
 # Set token
 config :telex,
-  token: "226492736:AAHgD0KyOxwYhvb4pqUnFb86lRT5B-9ZYbI"
+  token: "TOKEN"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

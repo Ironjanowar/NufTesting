@@ -15,7 +15,7 @@ defmodule Plataformabot.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger],
+    [extra_applications: [:logger, :bunt],
      mod: {TestBot, []}]
   end
 
@@ -31,7 +31,8 @@ defmodule Plataformabot.Mixfile do
   defp deps do
     [
       {:telex, git: "git@github.com:rockneurotiko/telex.git", tag: "0.1.1"},
-      {:distillery, "~> 1.2.2", runtime: false}
+      {:distillery, "~> 1.2.2", runtime: false},
+      {:bunt, "~> 0.1.0"}
     ]
   end
 end
