@@ -10,7 +10,14 @@ defmodule TestBot do
       worker(EchoBot, [:updates, Config.get(:telex, :token)])
     ]
 
-    opts = [strategy: :one_for_one, name: Sup]
-    Supervisor.start_link(children, opts)
+    opts = [strategy: :one_for_one, name: TestBot]
+    case Supervisor.start_link(children, opts) do
+      {:ok, _} = ok ->
+        IO.puts "Starting"
+        ok
+      error ->
+        IO.puts "Error"
+        error
+    end
   end
 end
